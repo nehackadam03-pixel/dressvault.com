@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | DressVault</title>
+    <meta name="description" content="Complete your order.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Dress<span>Vault</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div style="margin-bottom: 3rem;">
+            <h1 style="font-size: 3rem; color: #2b2b2b; letter-spacing: -0.5px;">Your Cart</h1>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 350px; gap: 2rem; align-items: start;">
+
+            <div
+                style="background: var(--card-bg); padding: 2.5rem; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+                <h2>Cart Items</h2>
+                <div id="cartItems" style="margin-top: 1rem;">
+                    <!-- Items will be injected here via JS -->
+                </div>
+                <div class="cart-total">
+                    Total: <span id="cartTotal">0</span>
+                </div>
+            </div>
+
+            <div
+                style="background: var(--card-bg); padding: 2.5rem; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+                <h2>Checkout</h2>
+                <form id="checkoutForm" style="margin-top: 1.5rem;">
+                    <div class="form-group">
+                        <label for="shippingName">Full Name</label>
+                        <input type="text" id="shippingName" required placeholder="Name for delivery">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod">
+                            <option value="card">Credit / Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="applepay">Apple Pay</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Shipping Address</label>
+                        <textarea id="address" rows="3" placeholder="Full address including zip code"
+                            required></textarea>
+                        <span id="addressError" class="error-msg"></span>
+                    </div>
+
+                    <button type="submit" class="btn"
+                        style="width: 100%; background: var(--accent-color); border-color: var(--accent-color);">Place
+                        Order</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DressVault Resell Clothing. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

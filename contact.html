@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DressVault</title>
+    <meta name="description" content="Get in touch with the DressVault team.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">Dress<span>Vault</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div
+            style="max-width: 600px; margin: 0 auto; background: var(--card-bg); padding: 3rem; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+            <h1
+                style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem; color: #2b2b2b; letter-spacing: -0.5px;">
+                Get in Touch</h1>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <span id="nameError" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <span id="emailError" class="error-msg"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Order Support</option>
+                        <option value="consignment">Consignment</option>
+                        <option value="styling">Styling Session</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="How can we help you?"></textarea>
+                    <span id="msgError" class="error-msg"></span>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DressVault Resell Clothing. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
